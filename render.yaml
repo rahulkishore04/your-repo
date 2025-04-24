@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mediserve-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://medi-seve:n36sNPqSKsA8W6tH@cluster0.panvsam.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLOUDINARY_CLOUD_NAME
+        value: ddy4cmmcd
+      - key: CLOUDINARY_API_KEY
+        value: 688519793156467
+      - key: CLOUDINARY_API_SECRET
+        value: 89DCG6r11MkHpeXpkotQJt_A7Cg
+      - key: NODE_ENV
+        value: production
